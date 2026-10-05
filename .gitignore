@@ -1,4 +1,21 @@
-data/raw/ 
-data/processed/ 
-__pycache__/ 
-.ipynb_checkpoints/ 
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log

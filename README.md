@@ -1,122 +1,100 @@
-# 🛍️ E-Commerce Customer Intelligence & Churn Prediction System
+# 🛍️ E-Commerce Customer Intelligence & Churn Prediction
 
 ## 📌 Project Overview
 
-The **E-Commerce Customer Intelligence & Churn Prediction System** is an end-to-end Data Analytics and Machine Learning project designed to understand customer purchasing behavior, segment customers based on their activity, and identify customers who are at risk of churn.
+**E-Commerce Customer Intelligence & Churn Prediction** is an end-to-end Data Analytics and Machine Learning project developed to analyze customer purchasing behavior, identify meaningful customer segments, and predict customers who are at risk of churn.
 
-The project transforms raw e-commerce transaction data into meaningful customer-level insights using **data preprocessing, exploratory data analysis, RFM analysis, customer segmentation, feature engineering, and machine learning-based churn prediction**.
+The project transforms raw e-commerce transaction data into actionable customer insights using **Python, Exploratory Data Analysis (EDA), RFM Analysis, Customer Segmentation, Feature Engineering, and Machine Learning**.
 
-The primary goal is to help businesses understand **who their most valuable customers are, which customers are becoming inactive, and where customer retention efforts should be focused.**
+The objective is to help businesses understand customer behavior, identify valuable and inactive customers, and support data-driven customer retention decisions.
 
 ---
 
 ## 🎯 Business Problem
 
-E-commerce businesses generate large volumes of transaction data every day. However, raw transaction data alone does not clearly indicate:
+E-commerce businesses collect large amounts of customer transaction data, but raw transaction records do not directly explain customer value or churn risk.
 
-- Which customers are highly valuable?
+Businesses need answers to questions such as:
+
+- Who are the most valuable customers?
 - Which customers purchase frequently?
 - Which customers have become inactive?
-- Which customers are at risk of leaving?
-- Which customer segments require retention strategies?
+- Which customers are at risk of churn?
+- Which customer segments require more attention?
+- What behavioral patterns are associated with customer churn?
 
-Without proper customer analytics, businesses may lose valuable customers and spend marketing resources inefficiently.
-
-This project addresses these challenges by converting transaction-level data into **customer-level behavioral insights** and applying machine learning to support churn identification.
+This project addresses these questions by converting transaction-level data into customer-level insights and applying machine learning for churn classification.
 
 ---
 
-## 🧠 Key Objectives
+## 🚀 Key Objectives
 
-The major objectives of this project are:
-
-- Clean and preprocess raw e-commerce transaction data.
-- Perform exploratory data analysis to understand purchasing patterns.
+- Clean and preprocess e-commerce transaction data.
+- Perform Exploratory Data Analysis.
 - Analyze customer purchasing behavior.
-- Calculate **RFM (Recency, Frequency, Monetary)** metrics.
-- Segment customers based on their purchasing behavior.
-- Identify high-value and at-risk customer groups.
-- Build machine learning models for churn classification.
-- Compare multiple classification algorithms.
-- Evaluate model performance using classification metrics.
-- Generate business-oriented customer insights.
-- Support data-driven customer retention strategies.
+- Calculate Recency, Frequency, and Monetary (RFM) metrics.
+- Segment customers based on purchasing behavior.
+- Identify valuable, loyal, inactive, and at-risk customers.
+- Engineer customer-level features for machine learning.
+- Build and compare multiple churn prediction models.
+- Evaluate model performance using appropriate metrics.
+- Generate meaningful business insights from customer data.
 
 ---
 
 ## 📊 Dataset
 
-The project uses an **Online Retail transaction dataset** containing historical e-commerce purchase records.
+The project uses an **Online Retail transactional dataset** containing historical e-commerce purchase information.
 
-### Important Features
+### Main Features
 
 | Feature | Description |
-|--------|-------------|
-| InvoiceNo | Unique invoice/transaction number |
+|---|---|
+| InvoiceNo | Unique transaction/invoice number |
 | StockCode | Product identification code |
 | Description | Product description |
-| Quantity | Number of units purchased |
-| InvoiceDate | Date and time of transaction |
-| UnitPrice | Price per product unit |
+| Quantity | Number of products purchased |
+| InvoiceDate | Transaction date and time |
+| UnitPrice | Price per product |
 | CustomerID | Unique customer identifier |
 | Country | Customer's country |
 
-The raw transaction data is transformed into customer-level analytical data through preprocessing and feature engineering.
+The transaction data is processed and transformed into customer-level analytical features for RFM analysis and churn prediction.
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Project Workflow
 
 ```text
-                 ┌─────────────────────────┐
-                 │     Raw Transaction     │
-                 │          Data           │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │   Data Cleaning &       │
-                 │   Preprocessing         │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │ Exploratory Data        │
-                 │ Analysis (EDA)          │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │ Customer-Level Feature  │
-                 │ Engineering             │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │      RFM Analysis       │
-                 │ Recency | Frequency |   │
-                 │ Monetary                │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │ Customer Segmentation   │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │ Churn Feature           │
-                 │ Engineering             │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │ Machine Learning Models │
-                 │ LR | RF | XGBoost       │
-                 └────────────┬────────────┘
-                              │
-                              ▼
-                 ┌─────────────────────────┐
-                 │ Model Evaluation &      │
-                 │ Business Insights       │
-                 └─────────────────────────┘
+Raw E-Commerce Data
+        │
+        ▼
+Data Cleaning & Preprocessing
+        │
+        ▼
+Exploratory Data Analysis
+        │
+        ▼
+Customer-Level Feature Engineering
+        │
+        ▼
+RFM Analysis
+        │
+        ▼
+Customer Segmentation
+        │
+        ▼
+Churn Feature Engineering
+        │
+        ▼
+Machine Learning
+        │
+        ├── Logistic Regression
+        ├── Random Forest
+        └── XGBoost
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Business Insights

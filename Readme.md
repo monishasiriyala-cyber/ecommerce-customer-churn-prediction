@@ -1,192 +1,100 @@
-# E-commerce Customer Intelligence & Behavior-Based Targeting System
+# 🛍️ E-Commerce Customer Intelligence & Churn Prediction
 
 ## 📌 Project Overview
 
-This project is an end-to-end **Data Analytics and Data Science** solution designed to analyze customer behavior in an e-commerce platform, identify valuable customer segments, predict churn, estimate Customer Lifetime Value (CLV), and enable **behavior-based targeting** (e.g., discount-driven vs. regular buyers).
+**E-Commerce Customer Intelligence & Churn Prediction** is an end-to-end Data Analytics and Machine Learning project developed to analyze customer purchasing behavior, identify meaningful customer segments, and predict customers who are at risk of churn.
 
-The project follows **real-world industry practices**, using raw transactional data and a full analytics pipeline involving **SQL, Python, Excel, Power BI/Tableau, Git, and AWS (optional)**.
+The project transforms raw e-commerce transaction data into actionable customer insights using **Python, Exploratory Data Analysis (EDA), RFM Analysis, Customer Segmentation, Feature Engineering, and Machine Learning**.
+
+The objective is to help businesses understand customer behavior, identify valuable and inactive customers, and support data-driven customer retention decisions.
 
 ---
 
 ## 🎯 Business Problem
 
-E-commerce companies face challenges such as:
+E-commerce businesses collect large amounts of customer transaction data, but raw transaction records do not directly explain customer value or churn risk.
 
-* High customer acquisition cost
-* Customers purchasing only during discounts or free delivery
-* Inability to identify churn-risk users early
-* Lack of customer-level targeting strategies
+Businesses need answers to questions such as:
 
-This project helps businesses answer:
+- Who are the most valuable customers?
+- Which customers purchase frequently?
+- Which customers have become inactive?
+- Which customers are at risk of churn?
+- Which customer segments require more attention?
+- What behavioral patterns are associated with customer churn?
 
-* Who are the most valuable customers?
-* Which customers are likely to churn?
-* Which customers respond only to discounts or free delivery?
-* How should marketing offers be personalized?
+This project addresses these questions by converting transaction-level data into customer-level insights and applying machine learning for churn classification.
 
 ---
 
-## 🧠 Key Objectives
+## 🚀 Key Objectives
 
-* Analyze customer purchase behavior using transactional data
-* Segment customers based on RFM and behavioral patterns
-* Predict customer churn using machine learning models
-* Estimate Customer Lifetime Value (CLV)
-* Build interactive dashboards for business decision-making
+- Clean and preprocess e-commerce transaction data.
+- Perform Exploratory Data Analysis.
+- Analyze customer purchasing behavior.
+- Calculate Recency, Frequency, and Monetary (RFM) metrics.
+- Segment customers based on purchasing behavior.
+- Identify valuable, loyal, inactive, and at-risk customers.
+- Engineer customer-level features for machine learning.
+- Build and compare multiple churn prediction models.
+- Evaluate model performance using appropriate metrics.
+- Generate meaningful business insights from customer data.
 
 ---
 
 ## 📊 Dataset
 
-**Source:** Kaggle – Online Retail (UK) Dataset
-**Type:** Real-world transactional data
-**Format:** CSV (downloaded as ZIP)
+The project uses an **Online Retail transactional dataset** containing historical e-commerce purchase information.
 
-### Main Columns
+### Main Features
 
-* `InvoiceNo` → Transaction ID
-* `StockCode` → Product ID
-* `Description` → Product name
-* `Quantity` → Units purchased
-* `InvoiceDate` → Date & time
-* `UnitPrice` → Price per unit
-* `CustomerID` → Customer identifier
-* `Country` → Customer country
+| Feature | Description |
+|---|---|
+| InvoiceNo | Unique transaction/invoice number |
+| StockCode | Product identification code |
+| Description | Product description |
+| Quantity | Number of products purchased |
+| InvoiceDate | Transaction date and time |
+| UnitPrice | Price per product |
+| CustomerID | Unique customer identifier |
+| Country | Customer's country |
 
-⚠️ Raw data is stored and preserved without modification.
+The transaction data is processed and transformed into customer-level analytical features for RFM analysis and churn prediction.
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Project Workflow
 
 ```text
-ecommerce-customer-intelligence/
-│
-├── data/
-│   ├── raw/            # Original dataset (never modified)
-│   └── processed/      # Cleaned & transformed data
-│
-├── sql/                # Database schema & SQL queries
-├── notebooks/          # Python EDA & modeling notebooks
-├── dashboards/         # Power BI / Tableau dashboards
-├── models/             # Saved ML models
-├── reports/            # Proposal, documentation, analysis
-└── README.md
-```
-
----
-
-## 🛠️ Tools & Technologies
-
-| Category         | Tools                  |
-| ---------------- | ---------------------- |
-| Database         | MySQL / PostgreSQL     |
-| Data Analysis    | Python (pandas, numpy) |
-| Machine Learning | scikit-learn           |
-| Visualization    | Power BI / Tableau     |
-| Version Control  | Git & GitHub           |
-| Cloud (Optional) | AWS Free Tier          |
-
-All tools used are **free and industry-standard**.
-
----
-
-## 🔍 Methodology
-
-### 1. Data Understanding & Cleaning
-
-* Handle missing `CustomerID`
-* Remove invalid transactions
-* Standardize date & numeric formats
-
-### 2. Exploratory Data Analysis (EDA)
-
-* Sales trends
-* Customer frequency analysis
-* Revenue contribution
-
-### 3. Customer Segmentation
-
-* RFM Analysis
-* Behavior-based clusters:
-
-  * Discount-only buyers
-  * Free-delivery seekers
-  * Regular customers
-  * Inactive / churn-risk users
-
-### 4. Churn Prediction
-
-* Feature engineering
-* ML models (Logistic Regression, Random Forest)
-* Model evaluation (AUC, Precision-Recall)
-
-### 5. Customer Lifetime Value (CLV)
-
-* Transaction-based CLV estimation
-* Segment-wise CLV comparison
-
-### 6. Visualization & Reporting
-
-* Interactive dashboards
-* Business-ready KPIs
-
----
-
-## 📈 Expected Outcomes
-
-* Clear identification of high-value customers
-* Early detection of churn-risk users
-* Actionable customer segments for targeted marketing
-* Dashboards usable by non-technical stakeholders
-
----
-
-## 🧪 Real-World Use Cases
-
-* Personalized discount campaigns
-* Free-delivery targeting optimization
-* Retention strategy design
-* Marketing ROI improvement
-* CRM system enhancement
-
----
-
-## 📅 Project Timeline (High-Level)
-
-| Phase                          | Duration |
-| ------------------------------ | -------- |
-| Business understanding & setup | Week 1   |
-| Data cleaning & SQL analysis   | Week 2   |
-| Python EDA & segmentation      | Week 3   |
-| ML modeling & CLV              | Week 4   |
-| Dashboards & reporting         | Week 5   |
-
----
-
-## 📂 Status
-
-🚧 **In Progress**
-This project is being developed step-by-step following industry practices.
-
----
-
-## 👤 Author
-
-**Nikunj Panthi**
-Aspiring Data Analyst / Data Scientist
-
----
-
-## 📜 License
-
-This project is for **educational and portfolio purposes only**.
-
----
-
-## ⭐ Notes for Recruiters
-
-* Raw data preserved
-* End-to-end analytics workflow
-* Business-focused insights
-* Reproducible & well-documented
+Raw E-Commerce Data
+        │
+        ▼
+Data Cleaning & Preprocessing
+        │
+        ▼
+Exploratory Data Analysis
+        │
+        ▼
+Customer-Level Feature Engineering
+        │
+        ▼
+RFM Analysis
+        │
+        ▼
+Customer Segmentation
+        │
+        ▼
+Churn Feature Engineering
+        │
+        ▼
+Machine Learning
+        │
+        ├── Logistic Regression
+        ├── Random Forest
+        └── XGBoost
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Business Insights
